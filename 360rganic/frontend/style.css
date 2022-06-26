@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box   
+}
+body{
+    /* height: 300vh; */
+}
+
+
+/* NAVBAR */
+
+.navbar{
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center ;
+    align-content:center;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+}
+.navbar #logo{
+    height: 80px;
+    margin: 10px 0 10px 40px;
+    cursor: pointer;
+}
+.navbar #input{
+    width: 420px;
+    padding: 10px;
+    border: 2px solid yellowgreen;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 900;
+}
+.navbar .menu ul{
+    display: flex;
+    flex-direction: row;
+}
+.navbar .menu ul li{
+    border-radius: 15px;
+    padding: 20px;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    width: 100px;
+    background: rgb(167, 236, 64);
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+}
+.navbar .menu ul li:hover{
+    /* padding: 20px; */
+    background: rgb(187, 255, 0);
+    color: rgb(0, 0, 0);
+    /* text-shadow: -1px -1px #514e4e; */
+    box-shadow: -10px 10px 10px rgba(25, 26, 25, 0.4);
+    transform: translateY(-10px);
+}
+.navbar .menu ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.navbar .utilities{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 40px 0 0;
+    gap: 15px;
+    align-items: center;
+    align-content: center;
+}
+.navbar .utilities #favorite{
+    height: 30px;   
+    cursor: pointer;
+}   
+.navbar .utilities #cart{
+    height: 20px;
+    cursor: pointer;
+}
+.navbar .utilities button{
+    height: 30px;
+    width: 60px;
+    margin-right: 20px;
+    background: rgb(167, 236, 64);
+    border: none;
+    border-radius: 10px;
+    
+}
+.navbar .utilities button:hover{
+    background: rgb(187, 255, 0);
+    border: none;
+    border-radius: 10px;
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+.navbar .utilities button a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* PRODUCTS */
+.products{
+    width: 100%;
+    position: absolute;
+    margin-top: 100px;
+    display: flex;
+    /* background-color: rgb(167, 236, 64); */
+    background: linear-gradient(rgb(167,236,64),rgb(208, 236, 167));
+}
+.products ul{
+    margin-left: 33px;
+    /* gap: 20px; */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 100px;
+}
+.products ul li{
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    padding: 10px 40px 10px 40px;
+    cursor: pointer;
+}
+.products ul li:first-child{
+    margin-right: 180px;
+    margin-left: -32px;
+    background: #feffff;
+}
+.products ul li:hover{
+    /* background: rgb(187, 255, 0); */
+    background: whitesmoke;
+}
+.products ul li:first-child:hover{
+    background: #cad2c5;
+}
+.content{
+    background-color: rgb(220, 238, 183);
+    margin-top: 138px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* border: 2px solid    red; */
+}
+.content .div{
+    background-color: rgb(254, 254, 254);  
+    box-shadow: -10px 10px 10px rgba(25, 26, 25, 0.4);
+    /* border: 2px solid green; */
+    border-radius: 8px;
+    gap: 12px;
+    height: 400px;
+    margin: 12px;
+    width: 420px;
+}
+.content  .box1,.box2{
+    display: flex;
+    margin: 30px;
+}
+
+.button a {
+    border-radius: 15px;
+    position: fixed;
+    top: 25em;
+    left: 61em;        
+    background: rgb(68, 68, 68);
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 10px 10px;
+    transition: 0.5s;
+}
+a:hover {
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+.button a::before {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    border-radius: 15px;
+    background: rgb(38, 37, 37);
+}
+.button a span {
+    position: relative;
+    z-index: 1;
+}
+.button a span h4{
+    display: none;
+}
+a i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+       
+.button a i::before {
+    content: "";
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    border-radius: 15px;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #444;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+a:hover i::before {
+    width: 20px;
+    left: 20%;
+    border-radius: 15px;
+}
+a i::after {
+    border-radius: 15px;
+    content: "";
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #444;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+a:hover i::after {
+    width: 20px;
+    border-radius: 15px;
+    left: 80%;
+}
+.Sign-in{
+    position: relative;
+    display: inline;
+}
+.Sign-in .Sign-in-form {
+    border: 2px solid green;
+    background-color: whitesmoke;
+    border-radius: 6px;
+    /* padding: 10px; */
+    padding: 30px 20px 20px 10px ;
+    display: none;
+    position: absolute;
+}
+.Sign-in .Sign-in-form input{
+    border: none;
+    width: 130px;
+    /* padding: 2px 0 2px 0; */
+    padding: 4px 10px 4px 10px;
+    border-radius: 4px;
+}
+.Sign-in .Sign-in-form input[type=submit]{
+    border-radius: 1px;
+    padding: 4px;
+    background: rgb(167,236,64);
+    font-weight: 900;
+    cursor: pointer;
+}
+.Sign-in .Sign-in-form input[type=submit]:hover{
+    transform: translateX(4%);
+}
+.Sign-in .Sign-in-form #New-user{
+    /* text-decoration: none; */
+    transform: translateX(0);
+    margin-top: 10px;
+    width: 120px;
+    background-color: whitesmoke;
+    color: brown;
+}
+.Sign-in .Sign-in-form #New-user a{
+    color: black;
+}
+.Sign-in .Sign-in-form #New-user a:hover{
+    color: rgb(4, 0, 218);
+    text-decoration: underline;
+}
+.Sign-in-form h3{
+    margin-bottom: 20px;
+}
+.Sign-in:hover .Sign-in-form {
+    display: block;
+    position: absolute;
+}
+
+
+.cart{
+    position: relative;
+    display: inline;
+}
+.cart .cart-inset{
+    background: whitesmoke;
+    border: 1px solid white;
+    display: none;
+    position: absolute;
+}
+.cart .cart-inset ul li{
+    list-style: none;
+    padding: 12px;
+}
+.cart .cart-inset ul li a{
+    text-decoration: none;
+}
+.cart .cart-inset ul li:hover{
+    background: rgb(187, 255, 0);
+}
+.cart:hover .cart-inset{
+    display: flex;
+    flex-direction: column;   
+}
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 28px;
+    border: none;
+    outline: none;
+    /* background-color: rgb(15, 129, 21); */
+    /* color: white; */
+    cursor: pointer;
+    /* padding: 10px; */
+    border-radius: 4px;
+  }
+  
+  #myBtn:hover {
+    /* background-color: #555; */
+  }
