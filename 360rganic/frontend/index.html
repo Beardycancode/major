@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>360RGANIC - NATURE'S COLLECTIVE</title>
+    <link rel="icon" href="src/logo.png" type="image/icon type" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <img id="logo" src="src/logo.png" alt="" />
+      <input id="input" type="text" placeholder="Search Products"  spellcheck="true"/>
+      <div class="menu">
+        <ul>
+          <li style="--i: 4"><a href="#">Home</a></li>
+          <li style="--i: 3"><a href="#">About</a></li>
+          <li style="--i: 2"><a href="#">Contact</a></li>
+          <li style="--i: 1"><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="utilities">
+        <div class="Sign-in">
+          <button id="sign-in"><a href="#">Login</a></button>
+          <div class="Sign-in-form">
+            <h3>Sign-in</h3>
+            <form action="">
+              <label for="username">Username:</label><br />
+              <input type="text" id="username" name="username" /><br />
+              <label for="pwd">Password:</label><br />
+              <input type="password" id="pwd" name="pwd" /><br /><br />
+              <input type="submit" value="Submit" />
+              <button id="New-user"><a href="#">Create an Account</a></button>
+            </form>
+          </div>
+        </div>
+        <div class="cart">
+          <img id="cart" src="src/icons8-favorite-cart-50.png" alt="" />
+          <div class="cart-inset">
+            <ul>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Cart</a></li>
+              <li><a href="#">Orders</a></li>
+              <li><a href="#">Location</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <img id="favorite" src="src/icons8-heart-50.png" alt="" />
+      </div>
+    </div>
+    <div class="products">
+      <ul>
+        <li>Filter</li>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+        <li>Item6</li>
+        <li>Item7</li>
+        <li>Item8</li>
+        <li>Item9</li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="box1">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+      </div>
+      <div class="box2">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+      </div>
+      <div class="box2">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+      </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">⬆️</button>
+    <!-- <div class="button">
+      <a href="#" style="--clr: GreenYellow"><span>💭</span><i></i></a>
+    </div> -->
+    
+
+    <script>
+      var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+    </script>
+  </body>
+</html>
